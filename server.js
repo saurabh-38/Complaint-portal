@@ -22,9 +22,6 @@ const articles= await Article.find().sort({createdAt: 'desc'})
         res.render('articles/index',{articles: articles})
 })
 
-
-
-
 app.use('/articles',articleRouter)
 app.listen(5000)
   
