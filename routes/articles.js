@@ -4,11 +4,26 @@ const  Article=require('./../models/article')
 
 const router=express.Router()
 
+
+
+
 router.get('/new',(req,res)=>{
 
 
        res.render('articles/new',{article: new Article()})
 })
+
+
+router.get('/admin',async(req,res)=>{
+
+        
+const articles= await Article.find().sort({createdAt: 'desc'})
+
+        res.render('articles/admin',{articles: articles})
+})
+
+
+
 
 router.get('/edit/:id',async(req,res)=>{
 
@@ -44,7 +59,7 @@ router.delete('/:id',async(req,res)=>{
 
         console.log("delete request")
         await Article.findByIdAndDelete(req.params.id)
-        res.redirect('/')
+        res.redirect('/articles/admin')
 
 })
 

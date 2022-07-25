@@ -9,26 +9,34 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 </head>
 <body>
-       
         <div class="container">
                 <h1 class="mb-4">Problem</h1>
-                <a href="articles/new" class="btn btn-success">New Problem</a>
-                
           <% articles.forEach(article => { %>
              <div class="card mt-4">
-             
                 <div class="card-body">
          <h4 class="card-title"> <%= article.title %></h4>
          <div class="card-subtitle text-muted mb-2">
          <%= article.createdAt %>
-
          </div>
          <div  class="card-text mb-2">
-                 <%= article.description %> <a href="articles/<%=article.slug %>" class="btn btn-primary"> Read More</a>
-                
-              
+<div class="from-group">
+
+        <label for="description">Available time</label>
+   <p name="description" id="description" class="form-control"  > <%= article.description %></p>
+</div>
 
 
+
+<div class="from-group">
+        <label for="markdown">Problem description</label>
+        <p name="markdown" id="markdown" class="form-control"  ><%= article.markdown %></p>
+  
+</div>
+
+
+                 <form action="/articles/<%= article.id %>?_method=DELETE" method="POST" class="d-inline">
+                 <button type="submit" class="btn btn-danger">Solved</button>
+                 </form>
                 </div>
                 </div>                   
              </div>
