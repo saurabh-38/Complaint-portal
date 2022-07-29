@@ -32,6 +32,18 @@
 
 ---
 
+
+> ## Screen Shots
+
+ ![ss]()
+ ---
+ ![ss](https://github.com/saurabh-38/Complaint-portal/blob/master/Screenshot%20(1034).png)
+ ---
+ ![ss](https://github.com/saurabh-38/Complaint-portal/blob/master/Screenshot%20(1035).png)
+ ---
+ ![ss](https://github.com/saurabh-38/Complaint-portal/blob/master/Screenshot%20(1036).png)
+
+
 > ## Installation
 
 - open this repository in code editor after cloning
