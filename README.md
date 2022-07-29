@@ -7,9 +7,9 @@
 
 > ## Table of content:
 
-- [Features](https://github.com/montugol32/RESOL-NET#features)
-- [Technology Stack](https://github.com/montugol32/RESOL-NET#techstack-used)
-- [Installation](https://github.com/montugol32/RESOL-NET#installation)
+- [Features]
+- [Technology Stack]
+- [Installation]
 
 
 ---
